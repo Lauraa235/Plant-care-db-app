@@ -1,2 +1,3 @@
 # Plant-care-db-app
-PostgreSQL application for tracking plant growth using temporal and active database concepts
+Plant Care Database Application. 
+PostgreSQL-based application for tracking plant growth, events, reminders and images using temporal and active database concepts.
