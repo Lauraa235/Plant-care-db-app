@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <script type="module" src="./js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/dizajn.css">
+    <link rel="stylesheet" type="text/css" href="./css/dogadaj.css">
+
+    <meta charset="utf-8">
+    <meta name="autor" content="Laura Benić">
+    <title>Događaji i podsjetnici</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Podsjetnici i događaji</h1>
+        <p class="podnaslov">
+            Pregled i upravljanje podsjetnicima za njegu biljaka.
+        </p>
+    </header>
+
+    <nav id="navigacija">
+        <a href="index.html">Početna</a>
+        <a href="biljke.html">Biljke</a>
+        <a href="dogadaji.html" class="trenutna">Događaji</a>
+    </nav>
+
+    <main>
+
+        <section class="poruka">
+            <div id="statusPoruka" class="status" role="status" aria-live="polite"></div> <!-- ovaj font? -->
+        </section>
+
+        <section class="ploce">
+            <div class="kartica kartica-kas">
+                <h3>Kasni</h3>
+                <p class="kartica-br" id="Kasni">0</p>
+                <p class="kartica-opis">Podsjetnici kojima je istekao rok</p>
+            </div>
+
+            <div class="kartica kartica-dns">
+                <h3>Danas</h3>
+                <p class="kartica-br" id="Danas">0</p>
+                <p class="kartica-opis">Podsjetnici za današnji dan</p>
+            </div>
+
+            <div class="kartica kartica-usk">
+                <h3>Uskoro</h3>
+                <p class="kartica-br" id="Uskoro">0</p>
+                <p class="kartica-opis">Podsjetnici u sljedećih 7 dana</p>
+            </div>
+        </section>
+
+
+        <section class="popis">
+            <h2>Popis podsjetnika</h2>
+
+            <div class="cijelaTablica">
+                <table class="tablica">
+                    <thead>
+                        <tr>
+                            <th>Biljka</th>
+                            <th>Tip događaja</th>
+                            <th>Rok</th>
+                            <th>Ponavljanje (dani)</th>
+                            <th>Status</th>
+                            <th>Akcije</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaPodsjetnika">
+                        <!-- app.js rendera -->
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="grid dva">
+
+            <section class="popis">
+                <h2>Dodaj novi podsjetnik</h2>
+                <p class="podnaslovDva">
+                    Definiraj podsjetnik za njegu biljke.
+                </p>
+
+                <form id="formaDodajDogadaj">
+
+                    <label for="odabirBiljke">Biljka *</label>
+                    <select id="odabirBiljke" required>
+                        <option value="" disabled selected>Odaberi biljku...</option>
+                    </select>
+
+                    <label for="tipDogadaja">Tip događaja *</label>
+                    <select id="tipDogadaja" required>
+                        <option value="" disabled selected>Odaberi tip događaja...</option>
+                    </select>
+
+                    <label for="naslovPodsjetnika">Naslov *</label>
+                    <input id="naslovPodsjetnika" type="text" placeholder="npr. Zalijevanje fikusa" required>
+
+                    <label for="rokDogadaja">Datum i vrijeme *</label>
+                    <input id="rokDogadaja" type="datetime-local" required>
+
+                    <label for="ponavljanje">Ponavljanje (u danima)</label>
+                    <input id="ponavljanje" type="number" min="1" placeholder="npr. 7">
+
+                    <div class="red">
+                        <button type="submit">Spremi podsjetnik</button>
+                        <button type="reset" class="gumb-kas">Očisti</button>
+                    </div>
+                </form>
+
+
+            </section>
+
+            <section class="popis">
+                <div class="red izmedu">
+                    <div>
+                        <h2>Log aktivnosti</h2>
+                        <p class="podnaslovDva">
+                            Evidencija izvršenih akcija nad podsjetnicima.
+                        </p>
+                    </div>
+                    <button id="gumbOsvjeziLog" class="gumb-kas">Osvježi</button>
+                </div>
+
+                <div class="red">
+                    <input id="filterLog" type="search" placeholder="Pretraži po akciji ili opisu...">
+                </div>
+
+                <div class="cijelaTablica">
+                    <table class="tablica">
+                        <thead>
+                            <tr>
+                                <th>Vrijeme</th>
+                                <th>Biljka</th>
+                                <th>Tip</th>
+                                <th>Akcija</th>
+                                <th>Opis</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaLoga">
+                            <!-- app.js rendera -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <a href="https://github.com/Lauraa235/Map-reduce-pipe-js" target="_blank">Github</a>
+        &copy; Laura Benić 2026
+    </footer>
+
+</body>
+
+</html>

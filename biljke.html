@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <script type="module" src="./js/app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/dizajn.css">
+    <link rel="stylesheet" type="text/css" href="./css/biljke.css">
+
+    <meta charset="utf-8">
+    <meta name="autor" content="Laura Benić">
+    <title>Biljke</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biljke</h1>
+        <p class="podnaslov">Dodavanje, pregled i brisanje biljaka iz evidencije.</p>
+    </header>
+
+    <nav id="navigacija">
+        <a href="index.html">Početna</a>
+        <a href="biljke.html" class="trenutna">Biljke</a>
+        <a href="dogadaji.html">Događaji</a>
+    </nav>
+
+    <main>
+
+        <section class="poruka">
+            <div id="statusPoruka" class="status" role="status" aria-live="polite"></div>
+        </section>
+
+        <section class="grid dva">
+
+            <section class="popis">
+                <h2>Dodaj novu biljku</h2>
+                <p class="podnaslovDva">Unesi osnovne podatke i spremi biljku u bazu.</p>
+
+                <form id="formaDodajBiljku">
+
+                    <label for="imeBiljke">Naziv biljke *</label>
+                    <input id="imeBiljke" type="text" required placeholder="npr. Aloe vera">
+
+                    <label for="lokacijaBiljke">Lokacija</label>
+                    <input id="lokacijaBiljke" type="text" placeholder="npr. Balkon">
+
+                    <label for="datumNabave">Datum nabave</label>
+                    <input id="datumNabave" type="date">
+
+                    <label for="opisBiljke">Opis</label>
+                    <textarea id="opisBiljke" reds="3" placeholder="npr. Ne zalijevati često, voli sunce"></textarea>
+
+                    <div class="red">
+                        <button type="submit">Spremi</button>
+                        <button type="reset" class="gumb-kas">Očisti</button>
+                    </div>
+                </form>
+
+            </section>
+
+            <section class="popis">
+                <div class="red izmedu">
+                    <div>
+                        <h2>Pregled biljaka</h2>
+                        <p class="podnaslovDva">Upravljanje postojećim biljkama.</p>
+                    </div>
+                    <button type="button" class="gumb-kas">Osvježi</button>
+                </div>
+
+                <label for="pretraziBiljke">Pretraživanje</label>
+                <input id="pretraziBiljke" type="search" placeholder="Upiši naziv, lokaciju ili opis...">
+
+                <div class="cijelaTablica">
+                    <table class="tablica">
+                        <thead>
+                            <tr>
+                                <th>Naziv</th>
+                                <th>Lokacija</th>
+                                <th>Datum nabave</th>
+                                <th>Opis</th>
+                                <th>Akcije</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaBiljaka">
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <a href="https://github.com/Lauraa235/Map-reduce-pipe-js" target="_blank">Github</a>
+        &copy; Laura Benić 2026
+    </footer>
+
+</body>
+
+</html>
