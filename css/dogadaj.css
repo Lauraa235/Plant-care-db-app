@@ -1,0 +1,285 @@
+.poruka {
+    margin-top: 14px;
+}
+
+.status {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 12px 14px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    min-height: 44px;
+    font-weight: 600;
+}
+
+.podnaslovDva {
+    color: #6b7280;
+}
+
+.hint {
+    color: #6b7280;
+    display: block;
+    margin-top: 10px;
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+.red {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.izmedu {
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.dva {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 860px) {
+    .dva {
+        grid-template-columns: 1fr;
+    }
+}
+
+.popis {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 18px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    margin-top: 14px;
+}
+
+.popis h2 {
+    margin: 0 0 6px;
+    color: #464855;
+    font-weight: 700;
+}
+
+.ploce {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+
+@media (max-width: 860px) {
+    .ploce {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kartica {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 16px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.kartica h3 {
+    margin: 0 0 6px;
+    color: #464855;
+    font-weight: 800;
+}
+
+.kartica-br {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+}
+
+.kartica-opis {
+    margin: 6px 0 0;
+    color: #6b7280;
+}
+
+.kartica-kas {
+    border-left: 6px solid #ef4444;
+}
+
+.kartica-dns {
+    border-left: 6px solid #f59e0b;
+}
+
+.kartica-usk {
+    border-left: 6px solid #22c55e;
+}
+
+.filters {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 12px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.filters input[type="search"] {
+    flex: 1;
+    min-width: 220px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 12px 0 8px;
+    color: #111827;
+}
+
+input[type="search"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fafffc;
+    outline: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6b8172;
+    box-shadow: 0 0 0 3px rgba(107, 129, 114, 0.18);
+}
+
+button {
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    color: #111827;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.gumb-kas {
+    background: #fafffc;
+}
+
+.gumb-pres {
+    background: #fff;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+.gumb-pres:hover {
+    background: #fff5f5;
+    border-color: #dc2626;
+}
+
+button[type="submit"] {
+    background: #6b8172;
+    border-color: #6b8172;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background: #537c60;
+    border-color: #537c60;
+}
+
+.cijelaTablica {
+    margin-top: 12px;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.tablica {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fafffc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.tablica th,
+.tablica td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+.tablica thead th {
+    background: #eef7f1;
+    color: #374151;
+    font-weight: 800;
+}
+
+.tablica tbody tr:hover {
+    background: #f3fbf6;
+}
+
+.tablica td:last-child {
+    white-space: nowrap;
+}
+
+.oznk {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border: 1px solid #d1d5db;
+    background: #fafffc;
+    color: #111827;
+}
+
+.oznk-kasni {
+    border-color: #ef4444;
+    color: #b91c1c;
+    background: #fff5f5;
+}
+
+.oznk-dns {
+    border-color: #f59e0b;
+    color: #92400e;
+    background: #fffbeb;
+}
+
+.oznk-usk {
+    border-color: #22c55e;
+    color: #166534;
+    background: #f0fdf4;
+}
+
+.oznk-neaktiv {
+    border-color: #9ca3af;
+    color: #4b5563;
+    background: #f9fafb;
+}

@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #deece2;
+    color: #111827;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    max-width: var(--maxw);
+    margin: 36px auto 10px;
+    padding: 0 24px;
+    /* malo veći unutarnji razmak */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 6px;
+    font-size: 32px;
+    letter-spacing: -0.4px;
+}
+
+.podnaslov {
+    margin: 0 auto;
+    max-width: 80ch;
+    color: #464855;
+    font-weight: 500;
+}
+
+/* NAV */
+#navigacija {
+    max-width: var(--maxw);
+    margin: 10px auto 18px;
+    padding: 12px 24px;
+    /* malo šire */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+#navigacija a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: #fafffc;
+    transition: 0.15s ease;
+}
+
+#navigacija a:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+#navigacija a.trenutna {
+    background: #6b8172;
+    color: #fff;
+    border-color: #6b8172;
+}
+
+#navigacija a.trenutna:hover {
+    background: #537c60;
+    border-color: #537c60;
+}
+
+/* MAIN */
+main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px 32px;
+    /* malo šire */
+}
+
+/* SEKCIJE KAO KARTICE */
+.uvod,
+.funkcionalnosti {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 18px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    margin-top: 14px;
+}
+
+.funkcionalnosti h2 {
+    margin: 0 0 10px;
+    color: #464855;
+    font-weight: 700;
+}
+
+.uvod p {
+    margin: 0;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* LISTA FUNKCIONALNOSTI */
+.funkcionalnosti ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.funkcionalnosti li {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.funkcionalnosti strong {
+    color: #111827;
+}
+
+/* FOOTER */
+footer {
+    max-width: var(--maxw);
+    margin: 12px auto 28px;
+    padding: 0 24px;
+    /* malo šire */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #111827;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+}
+
+footer a:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}

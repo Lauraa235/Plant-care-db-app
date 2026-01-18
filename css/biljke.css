@@ -1,0 +1,214 @@
+/* =====================================================
+   BILJKE – layout i komponente
+   ===================================================== */
+
+/* STATUS */
+.poruka {
+    margin-top: 14px;
+}
+
+.status {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 12px 14px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    min-height: 44px;
+    font-weight: 600;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.dva {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 860px) {
+    .dva {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FLEX RED */
+.red {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.izmedu {
+    justify-content: space-between;
+}
+
+/* KARTICE */
+.popis {
+    border: 1px solid #e1f1e6;
+    border-radius: 14px;
+    padding: 18px;
+    background: #e1f1e6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.popis h2 {
+    margin: 0 0 6px;
+    color: #464855;
+    font-weight: 700;
+}
+
+.podnaslovDva {
+    color: #6b7280;
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+.hint {
+    display: block;
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+/* =====================================================
+   FORMA
+   ===================================================== */
+
+label {
+    display: block;
+    font-weight: 700;
+    margin: 12px 0 8px;
+    color: #111827;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #fafffc;
+    outline: none;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #6b8172;
+    box-shadow: 0 0 0 3px rgba(107, 129, 114, 0.18);
+}
+
+/* =====================================================
+   GUMBI
+   ===================================================== */
+
+button {
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #111827;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.gumb-kas {
+    background: #fafffc;
+}
+
+/* PRIMARNI GUMB */
+button[type="submit"] {
+    background: #6b8172;
+    border-color: #6b8172;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background: #537c60;
+    border-color: #537c60;
+}
+
+/* OPASNE AKCIJE (brisanje) */
+.obrisi {
+    background: #fff;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+.obrisi:hover {
+    background: #fff5f5;
+    border-color: #dc2626;
+}
+
+/* =====================================================
+   TABLICA
+   ===================================================== */
+
+.cijelaTablica {
+    margin-top: 12px;
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+.tablica {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fafffc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.tablica th,
+.tablica td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tablica thead th {
+    background: #eef7f1;
+    font-weight: 800;
+    color: #374151;
+}
+
+.tablica tbody tr:hover {
+    background: #f3fbf6;
+}
+
+/* Akcije */
+.tablica td:last-child {
+    white-space: nowrap;
+}
+
+/* =====================================================
+   BADGE
+   ===================================================== */
+
+.badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    border: 1px solid #d1d5db;
+    background: #fafffc;
+    color: #111827;
+}
