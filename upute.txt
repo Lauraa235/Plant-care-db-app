@@ -1,15 +1,31 @@
-Za pokretanje u vscodu mora se u cmd terminalu upisati: node server.js 
-S time da sql datoteke moraju biti pohranjenje unutar napravljene baze podataka sa svim triggerima i funkcijama unutar psql-a
+Za pokretanje ovog projekta potrebno je imati:
 
-Za pisanje dokumentacije:
+    instaliran PostgreSQL
+    Node.js i npm
+    uređivač koda (preporučeno: Visual Studio Code)
 
-    1. Opis aplikacijske domene - treba jasno opisati domenu koju se želi implementirati (naznačiti koncepte, relacije, specifičnosti domene i sl.) te dati motivaciju za korištenje odabrane tehnologije (zašto baš ta tehnologija, a ne neka druga).
-    2. Teorijski uvod - prikazati osnove pristupa bazama podataka koji se koristi pri implementaciji (aktivne, deduktivne temporalne, poopćene, objektno-relacijske, objektno-orijentirane, polustrukturirane baze podataka) objasniti koje su njezine prednosti i nedostaci u odnosu na druge pristupe obzirom na aplikacijsku domenu.
-    3. Model baze podataka - treba opisati model baze podataka i prikazati ga u nekom od jezika za konceptualno modeliranje (ERA, UML, ORM i sl.).
-    4. Implementacija - prikazati osnovne dijelove implementacije baze podataka i odgovarajuće aplikacije.
-    5. Primjeri korištenja - prikazati nekoliko primjera korištenja aplikacije s bazom podataka uz odgovarajuće opise.
-    6. Zaključak - treba sadržavati procjenu tehnologije kao platforme za implementaciju odabrane aplikacijske domene, ograničenja implementacije i sl.
-    7. Literatura - navesti koncizno i precizno sve korištene izvore i citirati ih u tekstu.
+Koraci:
 
-Moja tema: Aplikacija za praćenje i pomoć u održavanju rasta biljke - datumi, događaji, podsjetnici, spremanje slika ... (Aktivne i temporalne baze podataka - PostgreSQL)
-Ja nemam spremanje slika niti necu.
+1. Preuzimanje projekta s Githuba ili raspakirajte ZIP.
+2. U terminalu otvori root direktorij projekta i instaliraj pakete (npm install)
+3. Kreiranje baze podataka:
+
+    Otvorite terminal i uđite u PostgreSQL sučelje kao postgres korisnik: psql -U postgres
+    Zatim izvršite sljedeće naredbe: 
+        CREATE DATABASE biljke;
+        CREATE USER user WITH PASSWORD 'password';
+        GRANT ALL PRIVILEGES ON DATABASE biljke TO user;
+    Izlaz iz PostgreSQL sučelja: \q
+
+4. Iz .SQL datoteka potrebno j eu bazu učitatisve  tablice, funkcije, okidače i početne podatke
+5. Postavljanje konekcije na bazu
+    U korijenu projekta potrebno je kreirati .env datoteku sa sljedećim sadržajem:
+
+        DATABASE_URL=postgres://USERNAME:PASSWORD@localhost:5432/biljke
+        PORT=3000
+
+    Umjesto USERNAME i PASSWORD potrebno je upisati vlastite PostgreSQL podatke
+
+6. Pokretanje servera naredbom: node server.js
+7. Nakon uspješnog pokretanja, aplikacija je dostupna u pregledniku na adresi: http://localhost:3000
+

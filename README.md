@@ -1,3 +1,31 @@
-# Plant-care-db-app
-Plant Care Database Application. 
-PostgreSQL-based application for tracking plant growth, events, reminders and images using temporal and active database concepts.
+# Za pokretanje ovog projekta potrebno je imati:
+
+    instaliran PostgreSQL
+    Node.js i npm
+    uređivač koda (preporučeno: Visual Studio Code)
+
+# Koraci:
+
+1. Preuzimanje projekta s Githuba ili raspakirajte ZIP.
+2. U terminalu otvori root direktorij projekta i instaliraj pakete (npm install)
+3. Kreiranje baze podataka:
+
+    Otvorite terminal i uđite u PostgreSQL sučelje kao postgres korisnik: psql -U postgres
+    Zatim izvršite sljedeće naredbe: 
+        CREATE DATABASE biljke;
+        CREATE USER user WITH PASSWORD 'password';
+        GRANT ALL PRIVILEGES ON DATABASE biljke TO user;
+    Izlaz iz PostgreSQL sučelja: \q
+
+4. Iz .SQL datoteka potrebno j eu bazu učitatisve  tablice, funkcije, okidače i početne podatke
+5. Postavljanje konekcije na bazu
+    U korijenu projekta potrebno je kreirati .env datoteku sa sljedećim sadržajem:
+
+        DATABASE_URL=postgres://USERNAME:PASSWORD@localhost:5432/biljke
+        PORT=3000
+
+    Umjesto USERNAME i PASSWORD potrebno je upisati vlastite PostgreSQL podatke
+
+6. Pokretanje servera naredbom: node server.js
+7. Nakon uspješnog pokretanja, aplikacija je dostupna u pregledniku na adresi: http://localhost:3000
+
