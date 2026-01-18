@@ -29,3 +29,4 @@ Koraci:
 6. Pokretanje servera naredbom: node server.js
 7. Nakon uspješnog pokretanja, aplikacija je dostupna u pregledniku na adresi: http://localhost:3000
 
+Link na Github: https://github.com/Lauraa235/Plant-care-db-app
